@@ -1,7 +1,7 @@
 public class MathOperations {
   public static void main( String[] args ) {
-    int a, b, c, d, e, f, g;
-    double x, y, z;
+    int a, b, c, d, e, f, g, h;
+    double w, x, y, z;
     String one, two, both;
 
      a = 10;
@@ -31,5 +31,14 @@ public class MathOperations {
      two = "house";
      both = one + two;
      System.out.println( both );
+
+     h = c * f + b;
+     w = x / 5 - g;
+     System.out.println( "h is " + h );
+     System.out.println( "w is " + w );
+
+
+
+
   }
 }

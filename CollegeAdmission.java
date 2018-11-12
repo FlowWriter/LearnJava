@@ -14,16 +14,16 @@ public class CollegeAdmission {
 
     if ( math >= 790 )
       out.print( "CERTAIN " );
-    else if ( math >= 710 )
+      else if ( math >= 390 )
+        out.print( "UNLIKELY " );
+      else if ( math >= 710 )
       out.print( "SAFE " );
-    else if (math >= 580 )
+      else if ( math >= 580 )
       out.print( "PROBABLE " );
-    else if (math >= 500 )
-      out.print( "UNCERTAIN" );
-    else if (math >= 390 )
-      out.print( "UNLIKELY " );
-    else // below 390
-      out.print( "DENIED" );
+      else if ( math >= 500 )
+      out.print( "UNCERTAIN " );
+      else // below 390
+      out.print( "DENIED " );
 
       out.println();
   }

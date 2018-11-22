@@ -42,13 +42,6 @@ public class PigDice {
         do { // computer rolls die
           roll = 1 + (int)(Math.random()*6);
           System.out.println( "\tComputer rolled a " + roll + "." );
-          if (turnTotal >= 20) {
-            System.out.print( "\tComputer ends the round with " );
-            System.out.print( ctot + " points.\n ");
-          }
-          if ( turnTotal >= 100) {
-          System.out.println( "The computer wins with " + (turnTotal + ctot) + " points." );
-          }
           if ( roll == 1) { //if a one is rolled, prints this out
             System.out.println( "\tThat ends its turn." );
             turnTotal = 0;
@@ -64,15 +57,20 @@ public class PigDice {
                 System.out.println( "\tComputer will roll again." );
               }
               else {
-                if ( turnTotal + ctot >= 100 ) {
-                System.out.println( "The computer wins with " + (turnTotal + ctot) + " points." );
+                if (turnTotal >= 20) {
+                  System.out.print( "\tComputer ends the round with " );
+                  System.out.print( (turnTotal + ctot) + " points.\n ");
+                }
+                else {
+                  if ( turnTotal + ctot >= 100 ) {
+                  System.out.println( "The computer wins with " + (turnTotal + ctot) + " points." );
+                  }
                 }
               }
             }
           } while (roll != 1 && turnTotal < 20 );//keeps comp turn unless it's a one or turn goes over 20
         ctot += turnTotal;
         }
-
     }  while ( ptot < 100 && ctot < 100 );
 
     if ( ptot > ctot ) {

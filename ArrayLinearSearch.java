@@ -15,15 +15,15 @@ public class ArrayLinearSearch {
     }
     System.out.println();
 
-    System.out.print("Which order to find?");
+    System.out.print("Which order to find? ");
     toFind = keyboard.nextInt();
 
     for ( int num : orderNumbers ) {
       if ( num == toFind ) {
         System.out.println( num + " found.");
-        else if ( ! num == toFind ) {
-          System.out.println( num + " NOT found." );
-        }
+      }
+      else {
+        System.out.println( num + " NOT found.");  
       }
     }
   }
